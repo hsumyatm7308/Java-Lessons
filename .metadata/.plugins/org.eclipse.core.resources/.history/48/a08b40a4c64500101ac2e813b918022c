@@ -1,0 +1,22 @@
+package Collection_Exercise;
+import java.util.Scanner;
+
+public class Student_Management {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("...Student Management System...");
+		System.out.println("1. Add New Student");
+		System.out.println("2. Display All Students");
+		System.out.println("3. Search Student By RollNo");
+		System.out.println("4. Remove Student By RollNo");
+		System.out.println("5. Display Student' who get highest Marks");
+		System.out.println("6. Exit System");
+		
+		System.out.println("Enter menu:");
+		int menu = Integer.parseInt(sc.nextLine());
+	}
+
+}

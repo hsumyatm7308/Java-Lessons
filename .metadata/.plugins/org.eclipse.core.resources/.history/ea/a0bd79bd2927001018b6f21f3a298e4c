@@ -1,0 +1,25 @@
+package multiplication;
+import java.util.Scanner;
+public class Prime {
+	public static void main(String args[]) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your num");
+		int num = sc.nextInt();
+		
+		int count = 0;
+		
+		if(num <= 1) {
+			System.out.println("Not a prime number");
+		}else {
+			for(int i = 2; i <= 10; i++ ) {
+				if((num % i) != 0) {
+					System.out.println(num + " is not prime number");
+				}else {
+					System.out.println(num + "  is a prime number");
+				}
+			}
+		}
+	
+	}
+}

@@ -1,0 +1,18 @@
+package Collection;
+
+public class Student {
+	private int id;
+	private String name;
+	private int rno;
+	private int mark;
+	private String email;
+	
+	public Student() {}
+	public Student(int id,String n,int rno,int m, String email) {
+		this.id = id;
+		this.name = n;
+		this.rno = rno;
+		this.mark = m;
+		this.email = email;
+	}
+}

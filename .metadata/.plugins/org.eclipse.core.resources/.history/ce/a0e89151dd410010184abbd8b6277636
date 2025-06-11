@@ -1,0 +1,15 @@
+package duedateassignment2;
+import java.lang.Math;
+
+public class d_assignment02 {
+	
+	static int recursive_power(int x, int p){
+		return Math.pow(x,p);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

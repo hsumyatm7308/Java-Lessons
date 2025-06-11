@@ -1,0 +1,25 @@
+package multiplication;
+
+import java.util.Scanner;
+
+public class Multi {
+	public static void main(String args[]) {
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter your input");
+		int input = obj.nextInt();
+		
+		int target = obj.nextInt();
+//		
+//		for(int i=1; i <= 12; i++) {
+//			System.out.println(input + "*" + i + "=" +  input * i);
+//		}
+//		
+		
+		for(int i=1; i <= target; i++) {
+			System.out.println(input + "*" + i + "=" +  input * i);
+		}
+		
+		
+		
+	}
+}

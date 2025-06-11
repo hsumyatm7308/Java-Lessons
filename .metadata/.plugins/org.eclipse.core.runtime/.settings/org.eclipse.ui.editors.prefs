@@ -1,0 +1,4 @@
+AbstractTextEditor.Accessibility.UseCustomCarets=false
+AbstractTextEditor.Accessibility.WideCaret=false
+eclipse.preferences.version=1
+overviewRuler_migration=migrated_3.1

@@ -1,0 +1,15 @@
+package Collection_Exercise;
+
+public class Student {
+	private int rollno;
+	private String name;
+	private int marks;
+	
+	public Student() {}
+	public Student(int rno,String n, int m) {
+		this.rollno = rno;
+		this.name = n;
+		this.marks = m;
+	}
+
+}

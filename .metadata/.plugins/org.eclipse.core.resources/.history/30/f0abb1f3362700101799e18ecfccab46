@@ -1,0 +1,23 @@
+package variable;
+
+import java.util.Scanner;
+
+public class EvenOdd {
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		for (int count = 1; count <= 3; count++) {
+
+			System.out.println("enter a number");
+
+			String value = sc.nextLine();
+			int num = Integer.parseInt(value);
+			if (num % 2 == 0) {
+				System.out.println(num + " is Even");
+			} else {
+				System.out.println(num + " is Odd");
+			}
+
+		}
+	}
+
+}

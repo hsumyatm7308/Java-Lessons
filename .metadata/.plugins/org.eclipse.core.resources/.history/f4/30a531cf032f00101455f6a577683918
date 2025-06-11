@@ -1,0 +1,10 @@
+package array;
+
+public class bubblesort {
+
+	public static void main(String[] args) {
+		int nums[] = {48,20,9,17,13,21,28,60};
+		
+	}
+
+}

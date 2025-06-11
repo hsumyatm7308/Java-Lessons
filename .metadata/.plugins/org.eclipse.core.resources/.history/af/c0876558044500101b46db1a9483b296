@@ -1,0 +1,15 @@
+package exceptionhandling;
+
+public class Person_Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Person ps = new Person();
+		ps.setName("Aye Aye");
+		ps.setAge(20);
+		ps.setEmail("aye@gmail.com");
+		
+
+	}
+
+}

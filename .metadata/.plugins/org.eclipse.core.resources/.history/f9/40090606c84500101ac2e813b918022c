@@ -1,0 +1,70 @@
+package Collection_Exercise;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Student_Management {
+	static Scanner sc = new Scanner(System.in);
+	static ArrayList<Student> slist = new ArrayList();
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("...Student Management System...");
+		System.out.println("1. Add New Student");
+		System.out.println("2. Display All Students");
+		System.out.println("3. Search Student By RollNo");
+		System.out.println("4. Remove Student By RollNo");
+		System.out.println("5. Display Student' who get highest Marks");
+		System.out.println("6. Exit System");
+
+		System.out.println("Enter menu:");
+		int menu = Integer.parseInt(sc.nextLine());
+
+		switch (menu) {
+		case 1:
+			System.out.println("Adding New Student");
+			addStudent();
+			break;
+		case 2:
+			System.out.println("Display All Student");
+			break;
+		case 3:
+			System.out.println("Search Student By RollNo");
+			break;
+		case 4:
+			System.out.println("Remove Student By RollNo");
+			break;
+		case 5:
+			System.out.println("Display Student who get hightest Marks");
+			break;
+		case 6:
+			System.out.println("Exit System");
+			System.exit(0);
+			break;
+		default:
+			System.out.println("Invalid Menu");
+
+		}
+	}
+
+	public static void addStudent() {
+		System.out.println("Enter RollNo:");
+		int rno = Integer.parseInt(sc.nextLine());
+		System.out.println("Enter Name:");
+		String name = sc.nextLine();
+		System.out.println("Enter Marks");
+		int marks = Integer.parseInt(sc.nextLine());
+		Student s = new Student(rno, name, marks);
+		slist.add(s);
+	}
+
+	public static void displayAll() {
+		for(Student s:slist) {
+	 	System.out.println(s.toString();
+		}
+		
+		
+	}
+
+}

@@ -1,0 +1,16 @@
+package Collection;
+
+import java.util.ArrayList;
+public class Student_Collection_Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList slist = new ArrayList();
+		Student s1 = new Student(101,"Aung Aung",1,78,"aung@gmail.com");
+		slist.add(s1);
+		Student s2 = new Student();
+		s2.setId(102);
+
+	}
+
+}

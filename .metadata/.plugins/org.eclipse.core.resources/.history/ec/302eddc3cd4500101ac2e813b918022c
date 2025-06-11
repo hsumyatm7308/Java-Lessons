@@ -1,0 +1,25 @@
+package Collection_Exercise;
+
+import java.util.Scanner;
+
+public class Producce_Management {
+	static Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("..Product Management System...");
+		System.out.println("1. Add New Product");
+		System.out.println("2. Display All Product");
+		System.out.println("3. Display Products that greater than amount");
+		System.out.println("4. Search Product By ID");
+		System.out.println("5. Exit System");
+
+		String choice = "yes";
+		while (choice.equals("yes")) {
+			System.out.println("Do another (yes/no?)");
+			choice = sc.nextLine();
+		}
+
+	}
+
+}

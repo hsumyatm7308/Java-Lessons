@@ -1,0 +1,7 @@
+package exceptionhandling;
+
+public class EmptyNameException extends Exception {
+	pubic EmptyNameException(String msg) {
+		super(msg);
+	}
+}

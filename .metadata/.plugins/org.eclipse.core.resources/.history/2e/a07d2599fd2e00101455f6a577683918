@@ -1,0 +1,11 @@
+package array;
+
+public class array_1D_Test {
+
+	public static void main(String[] args) {
+		String names[] = {"Aung Aung","Hla Hla","Khin Khin","Tun Tun","Su Su"};
+		
+
+	}
+
+}

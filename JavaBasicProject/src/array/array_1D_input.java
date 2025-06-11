@@ -1,0 +1,49 @@
+package array;
+import java.util.Scanner;
+public class array_1D_input {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter an array size");
+		int arrsize = Integer.parseInt(sc.nextLine());
+		
+		String names[] = new String[arrsize];
+		int marks[] = new int[arrsize];
+		char gender[] = new char[arrsize];
+		
+		for(int i = 0; i < arrsize; i++) {
+			System.out.println("Enter name");
+			names[i] = sc.nextLine();
+			System.out.println("Enter mark");
+			marks[i] = Integer.parseInt(sc.nextLine());
+			System.out.println("Enter gender");
+			gender[i] = sc.nextLine().charAt(0);
+
+		}
+		
+		for(int i = 0; i < arrsize; i++) {
+			System.out.println("Name :" + names[i]);
+			System.out.println("Mark :" + marks[i]);
+			System.out.println("Gender :" + gender[i]);
+			
+			
+			if(marks[i] >= 80) {
+				System.out.println("Pass with Grade A");
+			}else if(marks[i] >= 70) {
+				System.out.println("Pass with Grade B");
+			}else if(marks[i] >= 60) {
+				System.out.println("Pass with Grade C");
+			}else if(marks[i] >= 50) {
+				System.out.println("Pass with Grade D");
+			}else {
+				System.out.println("Fail");
+			}
+			
+			System.out.println();
+		}
+		
+		
+		
+	}
+
+}

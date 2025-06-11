@@ -1,0 +1,8 @@
+package exceptionhandling;
+
+public class DivisonByZeroException extends Exception {
+	public DivisionByZeroException(String msg) {
+		super(msg);
+	}
+
+}

@@ -1,0 +1,19 @@
+package array;
+
+public class array_1D_Test {
+
+	public static void main(String[] args) {
+		String names[] = {"Aung Aung","Hla Hla","Khin Khin","Tun Tun","Su Su"};
+		int marks[] = {78,88,98,65,40};
+		char gender[] = {'M','F','F','M','F'};
+		
+		for(int i = 0; i < names.length; i++) {
+			System.out.println("Name :" + names[i]);
+			System.out.println("Mark :" + marks[i]);
+			System.out.println("Gender :" + gender[i]);
+		}
+		
+
+	}
+
+}
