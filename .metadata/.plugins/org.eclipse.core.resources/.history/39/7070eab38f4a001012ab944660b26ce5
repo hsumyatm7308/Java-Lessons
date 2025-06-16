@@ -1,0 +1,11 @@
+package Collection;
+
+public class ArrayList_HashSet_Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String colors[] = {"black","white","pink","red","green","blue","white","gray","pink"};
+
+	}
+
+}

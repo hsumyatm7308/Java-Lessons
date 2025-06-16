@@ -1,0 +1,116 @@
+package Collection_Exercise;
+
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Customer_Management {
+
+	static Scanner sc = new Scanner(System.in);
+	static ArrayList<Customer> clist = new ArrayList();
+
+	public static void main(String[] args) {
+		System.out.println("...Customer Management System...");
+		System.out.println("1. Add New Customer");
+		System.out.println("2. Search Customer By Id");
+		System.out.println("3. Update Email By ID");
+		System.out.println("4. Delete Customer By ID");
+		System.out.println("5. Display All Customer");
+		System.out.println("6. Exit System");
+
+		String choice = "y";
+		while (choice.equalsIgnoreCase("y")) {
+
+	
+			System.out.println("Enter Menu:");
+			int menu = Integer.parseInt(sc.nextLine());
+			switch (menu) {
+			case 1:
+				System.out.println("1. Add New Customer");
+				addCustomer();
+				break;
+			case 2:
+				System.out.println("2. Search Customer By Id");
+				search();
+				break;
+			case 3:
+				System.out.println("3. Update Email By ID");
+				update();
+				break;
+			case 4:
+				System.out.println("4. Delete Customer By ID");
+				delete();
+				break;
+			case 5:
+				System.out.println("5. Display All Customer");
+				show();
+				break;
+			case 6:
+				System.out.println("6. Exit System");
+				System.exit(0);
+				break;
+			default:
+				System.out.println("Invalid");
+			}
+			System.out.println("Do another y/n");
+			choice = sc.nextLine();
+		}
+
+	}
+
+	public static void addCustomer() {
+		System.out.println(" ID : ");
+		int id = Integer.parseInt(sc.nextLine());
+		System.out.println("Enter name");
+		String name = sc.nextLine();
+		System.out.println("Enter email");
+		String email = sc.nextLine();
+		Customer c = new Customer(id, name, email);
+		clist.add(c);
+	}
+
+	public static void search() {
+		System.out.println("ID : ");
+		int id = Integer.parseInt(sc.nextLine());
+		for (Customer c : clist) {
+			if (c.getCustomerId() == id) {
+				System.out.println(c.toString());
+			}
+		}
+	}
+	
+	public static void update() {
+		System.out.println("ID : ");
+		int id = Integer.parseInt(sc.nextLine());
+		System.out.println("Email :");
+		String email = sc.nextLine();
+		for(Customer c : clist) {
+			if(id == c.getCustomerId()) {
+				c.setEmail(email);
+				System.out.println("You updated successfully");
+			}
+		}
+	}
+	
+	public static void delete() {
+		System.out.println("ID : ");
+		int id = Integer.parseInt(sc.nextLine());
+		for(Customer c : clist) {
+			if(id == c.getCustomerId()) {
+				clist.remove(c);
+				System.out.println("You deleted successfully");
+				break;
+			}
+		}
+	}
+	
+	public static void show() {
+		for(Customer c : clist) {
+		
+			
+				System.out.println(c.toString());
+		
+			
+		}
+	}
+
+}

@@ -1,0 +1,22 @@
+package Collection;
+import java.util.ArrayList;
+import java.util.Arrays;
+public class ArrayList_HashSet_Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String colors[] = {"black","white","pink","red","green","blue","white","gray","pink"};
+		ArrayList clist = new ArrayList(Arrays.asList(colors));
+		
+		clist.add("gold");
+		clist.add("red");
+		clist.add("brown");
+		
+		System.out.println("Data in ArrayList");
+		for(String c : clist) {
+			System.out.println(c);
+		}
+
+	}
+
+}

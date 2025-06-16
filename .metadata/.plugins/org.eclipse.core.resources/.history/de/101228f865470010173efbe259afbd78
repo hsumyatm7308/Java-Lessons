@@ -1,0 +1,14 @@
+package Collection_Exercise;
+
+public class Employee {
+	private int eid;
+	private String name;
+	private double salary;
+	
+	public Employee() {}
+	public Employee(int id,String n, double s) {
+		this.eid= id;
+		this.name = n;
+		this.salary = s;
+	}
+}

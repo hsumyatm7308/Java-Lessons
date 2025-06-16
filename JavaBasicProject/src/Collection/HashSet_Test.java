@@ -1,0 +1,38 @@
+package Collection;
+import java.util.HashSet;
+import java.util.Iterator;
+public class HashSet_Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HashSet<String> hs = new HashSet();
+		hs.add("Hla Hla");
+		hs.add("Khin Khin");
+		hs.add("Su Su");
+		hs.add("Tun Tun");
+		
+		for(String  name:hs) {
+			System.out.println(name);
+		}
+		hs.remove("Tun Tun");
+		System.out.println("After removing");
+		Iterator it = hs.iterator();
+		while(it.hasNext()) {
+			System.out.println(it.next());
+		}
+		
+		if(hs.contains("Kelvin")) {
+			System.out.println("Data Exits");
+			
+		}else {
+			System.out.println("Data doesn't exit");
+		}
+		
+		hs.clear();
+		System.out.println("After clearing");
+		for(String name:hs) {
+			System.out.println(hs);
+		}
+	}
+
+}

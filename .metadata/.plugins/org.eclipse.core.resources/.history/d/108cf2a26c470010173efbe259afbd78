@@ -1,0 +1,14 @@
+package Collection_Exercise;
+
+public class Book {
+		private int ISBN;
+		private String title;
+		private String author;
+		private boolean isIssued;
+		
+		public Book(){}
+		public Book(int ISBN, String title, String author, boolean isIssued) {
+			
+		}
+
+}

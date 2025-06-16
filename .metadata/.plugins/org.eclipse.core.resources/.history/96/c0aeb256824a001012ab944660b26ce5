@@ -1,0 +1,123 @@
+package Collection_Exercise;
+import java.util.ArrayList;
+import java.util.Scanner;
+public class Book_Management {
+	static ArrayList<Book> blist = new ArrayList();
+	static Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		System.out.println("...Library Management System..");
+		System.out.println("1. Add New Book");
+		System.out.println("2. Issue a book by ISBN");
+		System.out.println("3. Return a book by ISBN");
+		System.out.println("4. Display all book");
+		System.out.println("5. List all available books");
+		System.out.println("6. Delete a book by ISBN");
+		
+		String choice = "y";
+
+		try {
+			while (choice.equalsIgnoreCase("y")) {
+
+				System.out.println("Enter menu");
+				int menu = Integer.parseInt(sc.nextLine());
+				switch (menu) {
+				case 1:
+					System.out.println("1. Add New Book");
+					addBook();
+					break;
+				case 2:
+					System.out.println("2. Issue a book by ISBN");
+//					issue();
+					break;
+				case 3:
+					System.out.println("3. Return a book by ISBN");
+//					returnBook();
+					break;
+				case 4:
+					System.out.println("4.Display all book");
+					displayAll();
+				case 5:
+					System.out.println("5. List all available books");
+//					showAvaBook();
+					break;
+				case 6:
+					System.out.println("6. Delete a book by ISBN");
+//					delete();
+					break;
+
+				case 7:
+					System.out.println("Exit System");
+					System.exit(0);
+					break;
+				default:
+					System.out.println("Invalid Menu");
+
+				}
+				System.out.println("Do another y/n");
+				choice = sc.nextLine();
+			}
+			
+		}catch(NumberFormatException e) {
+			System.out.println("wait....");
+		}
+	}
+	
+	
+	public static void addBook() {
+		System.out.println("ISBN : ");
+		String ISBN = sc.nextLine();
+		System.out.println("Title : ");
+		String title = sc.nextLine();
+		System.out.println("Enter Author");
+		String author = sc.nextLine();
+		boolean isIssued = false;
+		Book b = new Book(ISBN,author,title,isIssued);
+		blist.add(b);
+	
+	}
+	
+	public static void issue() {
+		System.out.println("Enter ISBN");
+		String ISBN = sc.nextLine();
+		for(Book b:blist) {
+			if(ISBN.equals(b.getISBN()) && !b.isIssued()) {
+				b.setIssued(true);
+				break;
+//				System.out.println(b.toString());
+			}else if(b.isIssued()) {
+				System.out.println("This book is issued");
+			}else {
+				System.out.println("This Book doesn't exist.");
+			}
+		}
+	}
+	
+	public static void returnBook() {
+		System.out.println("REturn book");
+	}
+	
+	public static void displayAll() {
+		for(Book b : blist) {
+			if(b.isIssued() == false) {
+				System.out.println(b.toString());
+			}
+		}
+	}
+
+	public static void delete() {
+		System.out.println("Enter ISBN");
+		String ISBN = sc.nextLine();
+		boolean result = false;
+		for(Book b : blist) {
+			if(ISBN.equals(b.getISBN())) {
+				result = blist.remove(b);
+				break;
+			}
+		}
+		if(!result) {
+			System.out.println("There is no Book");
+		}
+	}
+	
+}

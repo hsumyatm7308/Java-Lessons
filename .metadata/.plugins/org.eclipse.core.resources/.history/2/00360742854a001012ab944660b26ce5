@@ -1,0 +1,14 @@
+package Collection_Exercise;
+
+public class Customer {
+	private int customerId;
+	private String name;
+	private String email;
+	
+	public Customer() {}
+	public Customer(int id, String n, String e) {
+		this.customerId = id;
+		this.name = n;
+		this.email = e;
+	}
+}

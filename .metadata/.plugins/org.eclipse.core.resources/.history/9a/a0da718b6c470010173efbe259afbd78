@@ -1,0 +1,9 @@
+package Collection_Exercise;
+
+public class Book {
+		private boolean ISBN;
+		private String title;
+		private String author;
+		private boolean isIssued;
+
+}

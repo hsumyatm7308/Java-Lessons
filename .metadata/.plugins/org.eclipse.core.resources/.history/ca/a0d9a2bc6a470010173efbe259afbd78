@@ -1,0 +1,115 @@
+package Collection_Exercise;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.Iterator;
+
+public class Employee_Management {
+	static ArrayList<Employee> emplist = new ArrayList();
+	static Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		System.out.println("...Employee Management System..");
+		System.out.println("1. Add New Employee");
+		System.out.println("2. Display All Employees");
+		System.out.println("3. Calculate Total Salary");
+		System.out.println("4. Calculate Average Salary");
+		System.out.println("5. Employee with Minimum Salary");
+		System.out.println("6. Employee with Maximum Salary");
+		System.out.println("7. Exit System");
+		int menu = Integer.parseInt(sc.nextLine());
+
+		switch (menu) {
+		case 1:
+			System.out.println("Add New Employee");
+			addEmployee();
+			break;
+		case 2:
+			System.out.println("Display All Employees");
+			displayAll();
+			break;
+		case 3:
+			System.out.println("Caculate Total Salary");
+			clcTotalSalary();
+			break;
+		case 4:
+			System.out.println("Caculate Average Salary");
+			clcAvgSalary();
+			break;
+		case 5:
+			System.out.println("Employee with Minimum Salary");
+			minSalary();
+			break;
+		case 6:
+			System.out.println("Employee with Maximum salary");
+			maxSalary();
+			break;
+		case 7:
+			System.out.println("Exit System");
+			System.exit(0);
+			break;
+		default:
+			System.out.println("Invalid Menu");
+
+		}
+
+	}
+
+	public static void addEmployee() {
+		System.out.println("ID : ");
+		int id = Integer.parseInt(sc.nextLine());
+		System.out.println("Name : ");
+		String name = sc.nextLine();
+		System.out.println("Enter Salary");
+		double sal = Double.parseDouble(sc.nextLine());
+		Employee em = new Employee(id, name, sal);
+		emplist.add(em);
+	}
+
+	public static void displayAll() {
+		Iterator it = emplist.iterator();
+		while (it.hasNext()) {
+			System.out.println(it.next().toString());
+		}
+	}
+
+	public static double clcTotalSalary() {
+		double total = 0;
+		for (Employee e : emplist) {
+			total += e.getSalary();
+		}
+		return total;
+	}
+
+	public static double clcAvgSalary() {
+		double avg = clcTotalSalary() / emplist.size();
+		return avg;
+	}
+	
+	public static Employee minSalary() {
+		double min = emplist.get(0).getSalary();
+		Employee ee = new Employee();
+		
+		for(Employee e:emplist) {
+			if(min > e.getSalary()) {
+				min = e.getSalary();
+				ee= e;
+			}
+		}
+		return ee;
+	}
+	
+	public static Employee maxSalary() {
+		double min = emplist.get(0).getSalary();
+		Employee ee = new Employee();
+		
+		for(Employee e:emplist) {
+			if(min < e.getSalary()) {
+				min = e.getSalary();
+				ee= e;
+			}
+		}
+		return ee;
+	}
+
+}

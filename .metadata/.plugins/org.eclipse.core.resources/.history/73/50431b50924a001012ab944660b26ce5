@@ -1,0 +1,65 @@
+package Collection_Exercise;
+
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class Email_Registration_System {
+	static Scanner sc = new Scanner(System.in);
+	static HashSet<String> hs = new HashSet();
+
+	public static void main(String[] args) {
+		System.out.println("...Email Registration System");
+		System.out.println("1. Add New Email");
+		System.out.println("2. Display All Emails");
+		System.out.println("3. Check Email is registered or Not");
+		System.out.println("4. Exit System");
+
+		System.out.println("Enter Menu");
+		int menu = Integer.parseInt(sc.nextLine());
+
+		String choice = "y";
+		while (choice.equalsIgnoreCase("y")) {
+
+			switch (menu) {
+			case 1:
+				System.out.println("Add New Email");
+				add();
+				break;
+			case 2:
+				System.out.println("Display All Emails");
+				show();
+				break;
+			case 3:
+				System.out.println("Check Email is registered or Not");
+				break;
+			case 4:
+				System.out.println("Exit System");
+				System.exit(0);
+				break;
+			default:
+				System.out.println("Invalid");
+			}
+
+			System.out.println("Do another y / n?");
+			choice = sc.nextLine();
+		}
+	}
+	
+	public static void add() {
+		System.out.println("Enter email");
+		String email = sc.nextLine();
+		if(hs.contains(email)) {
+			System.out.println("it's already exit");
+		}else {
+			hs.add(email);
+		}
+	}
+	
+	public static void show() {
+		Iterator it = new Iterator();
+		while(it.hasNext()) {
+			System.out.println(it.next());
+		}
+	}
+
+}

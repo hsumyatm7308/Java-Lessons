@@ -1,0 +1,11 @@
+package DBConnect;
+
+import java.sql.Connection;
+
+public class ConnectDB {
+	private String url = "jdbc:mysql://localhost:3306/14A";
+	private String user = "root";
+	private String password = "";
+	Connection con;
+	
+}

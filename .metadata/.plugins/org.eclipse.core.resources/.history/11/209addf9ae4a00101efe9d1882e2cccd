@@ -1,0 +1,16 @@
+package DBConnect;
+import java.sql.Connection;
+import java.sql.Statement;
+public class SelectData {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ConnectDB obj = new ConnectDB();
+		Connection conresult = obj.connect();
+		Statement stmt;
+		ResultSet rs;
+		stmt = conresult.createStatement();
+
+	}
+
+}

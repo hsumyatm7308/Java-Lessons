@@ -1,0 +1,18 @@
+package Collection_Exercise;
+import java.util.HashSet;
+import java.util.Scanner;
+public class Email_Registration_System {
+	static Scanner sc = new Scanner(System.in);
+	static HashSet<String> hs = new HashSet();
+
+	public static void main(String[] args) {
+		System.out.println("...Email Registration System");
+		System.out.println("1. Add New Email");
+		System.out.println("2. Display All Emails");
+		System.out.println("3. Check Email is registered or Not");
+		System.out.println("4. Exit System");
+		System.out.println("Enter Menu");
+		String menu = sc.nextLine();
+	}
+
+}

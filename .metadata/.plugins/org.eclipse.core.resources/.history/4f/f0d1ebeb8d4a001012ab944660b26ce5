@@ -1,0 +1,15 @@
+package Collection;
+import java.util.HashSet;
+
+public class HashSet_Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HashSet hs = new HashSet();
+		hs.add("Hla Hla");
+		hs.add("Khin Khin");
+		hs.add("Su Su");
+		hs.add("Tun Tun");
+	}
+
+}
