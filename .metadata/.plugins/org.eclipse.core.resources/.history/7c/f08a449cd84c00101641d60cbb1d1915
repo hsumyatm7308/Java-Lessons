@@ -1,0 +1,14 @@
+package Collection_Exercise;
+
+public class BookManagement_Map {
+
+	public static void main(String[] args) {
+		System.out.println("...Book Management System..");
+		System.out.println("1. Add New Book");
+		System.out.println("2. Check By ISBN");
+		System.out.println("3. Display All Books");
+		System.out.println("4. Exit System");
+		
+	}
+
+}

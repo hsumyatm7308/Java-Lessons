@@ -71,8 +71,7 @@ public class Book_Management {
 		String title = sc.nextLine();
 		System.out.println("Enter Author");
 		String author = sc.nextLine();
-		boolean isIssued = false;
-		Book b = new Book(ISBN,author,title,isIssued);
+		Book b = new Book(ISBN,author,title);
 		blist.add(b);
 	
 	}

@@ -1,0 +1,18 @@
+package Collection_Exercise;
+
+public class Unique_Words {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a paragraph");
+		String p = sc.nextLine();
+		
+		String words[] = p.split(" ");
+		HashSet<String> word_set = new HashSet();
+		for() {
+			
+		}
+	}
+
+}

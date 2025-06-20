@@ -1,0 +1,17 @@
+package Collection_Exercise;
+
+public class CustomerServiceSystem {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("...Customer Service System...");
+		System.out.println("1. Add New Customer");
+		System.out.println("2. Serve System");
+		System.out.println("3. Display All Customers");
+		System.out.println("4. Display Customers By Issue Type");
+		System.out.println("5. Exit System");
+		
+
+	}
+
+}

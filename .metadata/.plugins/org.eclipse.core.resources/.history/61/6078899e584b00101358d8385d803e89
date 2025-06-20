@@ -1,0 +1,18 @@
+package Collection_Exercise;
+
+import java.util.Scanner;
+
+public class Word_Frequency {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a paragraph");
+		String p = sc.nextLine();
+		
+		String words[] = p.split(" ");
+		
+
+	}
+
+}

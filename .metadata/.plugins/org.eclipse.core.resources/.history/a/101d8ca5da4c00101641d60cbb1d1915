@@ -1,0 +1,85 @@
+package Collection_Exercise;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class BookManagement_Map {
+	static Scanner sc = new Scanner(System.in);
+	static HashMap<Book,Integer> book_map = new HashMap<>();
+	public static void main(String[] args) {
+		System.out.println("...Book Management System..");
+		System.out.println("1. Add New Book");
+		System.out.println("2. Check By ISBN");
+		System.out.println("3. Display All Books");
+		System.out.println("4. Exit System");
+		
+		System.out.println("Enter menu");
+		int menu = Integer.parseInt(sc.nextLine());
+		switch(menu) {
+		case 1:
+			System.out.println("Adding New Book");
+			addBook();
+			break;
+		case 2:
+			System.out.println("Check By ISBN");
+			break;
+		case 3:
+			System.out.println("Display All");
+			break;
+		case 4:
+			System.out.println("Exit System");
+			System.exit(0);
+			break;
+			default:System.out.println("invalid");
+		}
+	}
+	
+	public static void addBook() {
+		System.out.println("ISBN : ");
+		String ISBN = sc.nextLine();
+		System.out.println("Title : ");
+		String title = sc.nextLine();
+		System.out.println("Enter Author");
+		String author = sc.nextLine();
+		Book b = new Book(ISBN,title,author);
+		System.out.println("Enter number of copies");
+		int copy = Integer.parseInt(sc.nextLine());
+		boolean flag = false;
+		for(Book bk:book_map.keySet()) {
+			if(bk.getISBN().equals(b.getISBN())) {
+				book_map.replace(bk,book_map.getOrDefault(bk,0) + copy);
+				flag = true;
+				break;
+			}
+		}
+		
+		if(!flag) {
+			book_map.put(b,copy);
+		}
+	}
+	
+	
+	public static void checkBook() {
+		System.out.println("Enter Check By ISBN: ");
+		String isbn = sc.nextLine();
+		boolean flag = false;
+		for(Book bk:book_map.keySet()) {
+			if(isbn.equals(bk.getISBN())){
+				System.out.println("Found");
+				System.out.println(bk.toString());
+				flag = true;
+				break;
+			}
+		}
+		if(!flag) {
+			System.out.println("Not Found");
+		}
+	}
+	
+	public static void displayAll() {
+		for(Book bk:book_map.keySet()) {
+			System.out.println(bk.toString() + " - " + book_map.get(bk)));
+		}
+	}
+
+}

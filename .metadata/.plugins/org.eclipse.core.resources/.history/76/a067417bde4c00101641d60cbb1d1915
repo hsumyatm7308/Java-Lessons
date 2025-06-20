@@ -1,0 +1,14 @@
+package Collection_Exercise;
+
+public class Customer_ex3 {
+	private int id ;
+	private String name;
+	private String issueType;
+	
+	public Customer_ex3() {}
+	public Customer(int id,String n,String type) {
+		this.id = id;
+		this.name = n;
+		this.issueType = type;
+	}
+}

@@ -1,0 +1,26 @@
+package Collection_Exercise;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Country_Capital_Dictionary {
+	static Scanner sc = new Scanner(System.in);
+	static HashMap<String,String> dict_map = new HashMap();
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("..Country-Capital Dictionary...");
+		System.out.println("1. Add country-Capital");
+		System.out.println("2. Search By Country");
+		System.out.println("3. Search By Capital");
+		System.out.println("4. Display All");
+		System.out.println("5. Remove By Country");
+		System.out.println("6. Update Capital By Country");
+		System.out.println("7. Exit System");
+		
+		System.out.println("Enter Menu:");
+		int menu;
+	}
+
+}

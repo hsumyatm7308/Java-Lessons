@@ -7,7 +7,7 @@ public class Book {
 		private boolean isIssued;
 		
 		public Book(){}
-		public Book(String ISBN, String title, String author,boolean isIssued) {
+		public Book(String ISBN, String title, String author) {
 			this.ISBN = ISBN;
 			this.title = title;
 			this.author = author;

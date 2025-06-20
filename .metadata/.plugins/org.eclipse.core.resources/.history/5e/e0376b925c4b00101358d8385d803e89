@@ -1,0 +1,121 @@
+package Collection_Exercise;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Country_Capital_Dictionary {
+	static Scanner sc = new Scanner(System.in);
+	static HashMap<String, String> dict_map = new HashMap();
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("..Country-Capital Dictionary...");
+		System.out.println("1. Add country-Capital");
+		System.out.println("2. Search By Country");
+		System.out.println("3. Search By Capital");
+		System.out.println("4. Display All");
+		System.out.println("5. Remove By Country");
+		System.out.println("6. Update Capital By Country");
+		System.out.println("7. Exit System");
+
+		System.out.println("Enter Menu:");
+		int menu = Integer.parseInt(sc.nextLine());
+		String choice = "y";
+		while (choice.equalsIgnoreCase("y")) {
+			switch (menu) {
+			case 1:
+				System.out.println("Adding Country-Capital");
+				add();
+				break;
+			case 2:
+				System.out.println("Search By Country");
+				searchByCountry();
+				break;
+			case 3:
+				System.out.println("Search By Capital");
+				searchByCapital();
+				break;
+			case 4:
+				System.out.println("Display All");
+				displayAll();
+				break;
+			case 5:
+				System.out.println("Remove By Country");
+				break;
+			case 6:
+				System.out.println("Update Captal By Country");
+				break;
+			case 7:
+				System.out.println("Exit System");
+				break;
+			default:
+				System.out.println("Invalid");
+			}
+		}
+	}
+	
+	public static void add() {
+		System.out.println("Enter Country");
+		String coun = sc.nextLine();
+		System.out.println("Enter Capital");
+		String cap = sc.nextLine();
+		dict_map.put(coun,cap);
+		
+	}
+
+	public static void searchByCountry() {
+		System.out.println("Enter Search Country");
+		String coun = sc.nextLine();
+		boolean flag = false;
+		for(String c:dict_map.keySet()) {
+			if(coun.equals(c)) {
+				System.out.println(c + "-" + dict_map.get(c));
+				flag = true;
+				break;
+			}
+		}
+		
+		if(!flag) {
+			System.out.println("Not Found");
+		}
+		
+	}
+	
+	public static void searchByCapital() {
+		System.out.println("Enter Search Capital");
+		String cap = sc.nextLine();
+		boolean flag = false;
+		for(String c:dict_map.keySet()) {
+			if(cap.equals(dict_map.get(c))) {
+				System.out.println(c + "-" + dict_map.get(c));
+				flag = true;
+				break;
+			}
+		}
+		
+		if(!flag) {
+			System.out.println("Not Found");
+		}
+		
+	}
+	
+	public static void displayAll() {
+		for(String c:dict_map.keySet()) {
+			System.out.println(c + "-" + dict_map.get(c));
+		}
+	}
+	
+	public static void remove() {
+		System.out.println("Enter remove Country");
+		String coun = sc.nextLine();
+		for(String c:dict_map.keySet()) {
+			if(coun.equals(c)) {
+				dict_map.remove(coun);
+				break;
+			}
+		}
+	}
+	
+	
+}

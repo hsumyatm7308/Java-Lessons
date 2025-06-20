@@ -1,0 +1,10 @@
+package Collection_Exercise;
+
+public class Country_Capital_Dictionary {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
